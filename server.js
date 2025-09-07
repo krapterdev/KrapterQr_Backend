@@ -8,6 +8,10 @@ const PORT = process.env.PORT || 5000;
 const userRoutes = require('./routes/userRoutes');
 const qrRoutes = require('./routes/qrRoutes');
 const scanRoutes = require('./routes/scanRoutes');
+const cors = require('cors');
+
+// Use CORS for all routes (You can configure options as needed)
+app.use(cors());
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
